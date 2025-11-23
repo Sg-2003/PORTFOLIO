@@ -1,0 +1,344 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="../PORTFOLIO/img/sukumar.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>WEB DEVELOPER</p>
+                <h1>Hi, I'm <span> Sukumar</span><br>Gope from Jamshedpur</h1> 
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------about------------------------------ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="../PORTFOLIO/img/SUKUMAR.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi, Sukumar Gope this side. I'm a Software Web Developer by using the basics of Programming languages 
+                       like :- Html, Css, Javascript, Python, Java, C, C++ and the latest technology of AI and ML. I explore the 
+                       things and give it to the shape of it. Well, I'm from Jamshedpur City, Jharkhand (India).Curently, I'm
+                       studying in Btech 2nd Year at University college of Engineering and Technology, Hazaribagh (825301).
+                       I'm Pursuing my study in IT (Information Technology) Branch.
+                    </p>
+                    <div class="tab-titles">
+                      <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                      <p class="tab-links" onclick="opentab('experience')">Exprience</p>
+                      <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Dev</span><br>Web Developing Interface</li>
+                            <li><span>App Dev</span><br>App Developing Interface</li>
+                            <li><span>UI/UX Designer</span><br>Designing Web/App Interface</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021 - Current</span><br>UI/UX Design Training at IT Company.</li>
+                            <li><span>2019 - 2021</span><br>Learn Web Development at Auto Cluster Limited.</li>
+                            <li><span>2017 - 2019</span><br>Intern App Development at LLC.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2012 - 2020</span><br>Completed 10th at Netaji Subhash Chandra High School, Kalikapur.</li>
+                            <li><span>2020 - 2023</span><br>Diploma at Govt. Polytechnic, Kharsawan</li>
+                            <li><span>2023 - Current</span><br>Pursuing B.Tech at UCET, Hazaribagh (825301)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------Services---------------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>I have been working on the web design from last 3 months, I greatly loved to design websites and learn new things and give shape of it.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>I can maintain the website design and handle it and magnifying its hosting to the browser.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>App design is based on React Js, node js and some other components.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------Portfolio---------------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="../PORTFOLIO/img/social_media.jpg">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>The app connects you to the talented people around the world.
+                            Download it from play store.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="https://media.istockphoto.com/id/1471820084/photo/top-view-of-smartphone-with-music-player-app-on-white-stone-office-desktop.webp?b=1&s=170667a&w=0&k=20&c=Kng5hCEBXgzc9Rv6WNOfCWTVtoJJBk0Hil-QCOAU3Vc=">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>This app provides you various types of latest songs across the world.
+                            Enjoy the newly downloaded songs.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="https://media.istockphoto.com/id/1200117474/photo/shopping-online-buy-in-online-shop.jpg?s=612x612&w=0&k=20&c=B5RGgpcSOux_M78h9H3HcKeeGn5grfU5GpH5yaJKCRo=">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>Here you can see the trending products among the whole world.
+                            Go and purchase them.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+    <!-- ---------------------Contact------------------------------ -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> sgsukumar321@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 6205472377</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="../PORTFOLIO/img/SUKUMAR RESUME...pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Enter your name.." required>
+                        <input type="email" name="E-Mail" placeholder="Enter your email.." required>
+                        <textarea name="Message" placeholder="Your Message" rows="6"></textarea>
+                        <button type="submit" class="btn btn2">submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Sukumar. Made with <i class="fas fa-heart"></i> by SG Coder</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="../PORTFOLIO/img/sukumar.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>WEB DEVELOPER</p>
+                <h1>Hi, I'm <span> Sukumar</span><br>Gope from Jamshedpur</h1> 
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------about------------------------------ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="../PORTFOLIO/img/SUKUMAR.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi, Sukumar Gope this side. I'm a Software Web Developer by using the basics of Programming languages 
+                       like :- Html, Css, Javascript, Python, Java, C, C++ and the latest technology of AI and ML. I explore the 
+                       things and give it to the shape of it. Well, I'm from Jamshedpur City, Jharkhand (India).Curently, I'm
+                       studying in Btech 2nd Year at University college of Engineering and Technology, Hazaribagh (825301).
+                       I'm Pursuing my study in IT (Information Technology) Branch.
+                    </p>
+                    <div class="tab-titles">
+                      <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                      <p class="tab-links" onclick="opentab('experience')">Exprience</p>
+                      <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Dev</span><br>Web Developing Interface</li>
+                            <li><span>App Dev</span><br>App Developing Interface</li>
+                            <li><span>UI/UX Designer</span><br>Designing Web/App Interface</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021 - Current</span><br>UI/UX Design Training at IT Company.</li>
+                            <li><span>2019 - 2021</span><br>Learn Web Development at Auto Cluster Limited.</li>
+                            <li><span>2017 - 2019</span><br>Intern App Development at LLC.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2012 - 2020</span><br>Completed 10th at Netaji Subhash Chandra High School, Kalikapur.</li>
+                            <li><span>2020 - 2023</span><br>Diploma at Govt. Polytechnic, Kharsawan</li>
+                            <li><span>2023 - Current</span><br>Pursuing B.Tech at UCET, Hazaribagh (825301)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------Services---------------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>I have been working on the web design from last 3 months, I greatly loved to design websites and learn new things and give shape of it.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>I can maintain the website design and handle it and magnifying its hosting to the browser.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>App design is based on React Js, node js and some other components.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------Portfolio---------------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="../PORTFOLIO/img/social_media.jpg">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>The app connects you to the talented people around the world.
+                            Download it from play store.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="https://media.istockphoto.com/id/1471820084/photo/top-view-of-smartphone-with-music-player-app-on-white-stone-office-desktop.webp?b=1&s=170667a&w=0&k=20&c=Kng5hCEBXgzc9Rv6WNOfCWTVtoJJBk0Hil-QCOAU3Vc=">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>This app provides you various types of latest songs across the world.
+                            Enjoy the newly downloaded songs.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="https://media.istockphoto.com/id/1200117474/photo/shopping-online-buy-in-online-shop.jpg?s=612x612&w=0&k=20&c=B5RGgpcSOux_M78h9H3HcKeeGn5grfU5GpH5yaJKCRo=">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>Here you can see the trending products among the whole world.
+                            Go and purchase them.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+    <!-- ---------------------Contact------------------------------ -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> sgsukumar321@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 6205472377</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="../PORTFOLIO/img/SUKUMAR RESUME...pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Enter your name.." required>
+                        <input type="email" name="E-Mail" placeholder="Enter your email.." required>
+                        <textarea name="Message" placeholder="Your Message" rows="6"></textarea>
+                        <button type="submit" class="btn btn2">submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Sukumar. Made with <i class="fas fa-heart"></i> by SG Coder</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+>>>>>>> 97d01af560ece01a9ab9df6408420e536ad4da05
+</html>
