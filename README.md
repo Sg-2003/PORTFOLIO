@@ -20,19 +20,20 @@
 
 ## ✨ Overview
 
-A fully handcrafted, single-page developer portfolio for **Sukumar Gope** — a Final Year B.Tech IT Student and Creative Developer from Jamshedpur. Built with zero front-end frameworks, it features a real-time **3D WebGL scene**, an **interactive AI chat agent**, a **typewriter hero animation**, cyber-themed neon highlights, and buttery-smooth GSAP-driven micro-animations throughout every section.
+A fully handcrafted, single-page developer portfolio for **Sukumar Gope** — a Final Year B.Tech IT Student and Creative Developer from Jamshedpur. Built with zero front-end frameworks, it features a real-time **3D WebGL scene**, an **interactive AI chat agent**, a **typewriter hero animation**, cyber-themed neon highlights across every section, and buttery-smooth GSAP micro-animations throughout.
 
 ---
 
 ## 🎯 Live Features
 
 ### 🐾 Interactive AI Shiba Agent (Craftz Dog)
-- A fully interactive **AI chatbot assistant** overlaid on the 3D Shiba Inu hero model
-- Floating glassmorphism chat panel with local NLP keyword matching
-- Answers questions about **skills, experience, projects, education & contact info**
-- Auto-scrolls to page sections and opens relevant tabs on user intent
+- Fully interactive **AI chatbot** overlaid on the 3D Shiba Inu model in the hero
+- Glassmorphism chat panel with local NLP keyword-matching
+- Answers questions about skills, experience, projects, education & contact info
+- Auto-scrolls to sections and opens tabs based on user intent
 - Triggers programmatic **CV download** directly from chat
-- Responds to 3D animation commands:
+
+**3D Animation Commands:**
 
 | Command | Action |
 |---------|--------|
@@ -42,33 +43,53 @@ A fully handcrafted, single-page developer portfolio for **Sukumar Gope** — a 
 | `/shake` | Excited side-to-side waggle |
 | `/color` | Randomizes ambient scene lighting |
 
-### 🔠 Typewriter Hero Title
-- Tag-safe character-by-character typewriter cycling through:
-  - **Sukumar Gope** → **a Web Developer** → **a Creative Coder** → **an IT Student**
-- Each keyword renders in theme accent colors — cyan or magenta
-- Smooth blinking cyber cursor
+---
 
-### 🎨 Cyber Neon Highlights
-- Key phrases throughout the page are lit with cyber accent colors:
-  - 🩵 **Cyber Cyan** (`#00f0ff`) — B.Tech IT Student, Creative Developer, passionate Software Web Developer
-  - 🌸 **Magenta** (`#ff2a75`) — SG Coder
-  - ✨ **Animated Neon Pulse** — "3D" in the hero description smoothly cycles between magenta and cyan with a glow effect
+### 🔠 Typewriter Hero Title
+- Cycles character-by-character through: **Sukumar Gope** → **a Web Developer** → **a Creative Coder** → **an IT Student**
+- Each keyword renders in theme accent colors (cyan / magenta)
+- Smooth blinking cyber cursor animation
+
+---
+
+### ✨ Cyber Neon Highlights System
+A consistent color language applied across all sections:
+
+| Color | Usage |
+|-------|-------|
+| 🩵 **Cyan** `#00f0ff` | Skills, technologies, subjects (About, Experience, Education) |
+| 🌸 **Magenta** `#ff2a75` | Company names, institutions, service keywords |
+| ✨ **Neon Pulse** | "3D" in hero — animates between magenta ↔ cyan in a 2s loop |
+
+**Highlights by section:**
+- **Home** — B.Tech IT Student, Creative Developer (cyan) · 3D (animated pulse)
+- **About** — passionate Software Web Developer, Final Year B.Tech IT Student (cyan)
+- **Experience** — React, Node.js, JavaScript, REST APIs, DSA (cyan) · Company names (magenta)
+- **Education** — Software Engineering, Data Structures, Web Graphics etc. (cyan) · Institutions (magenta)
+- **Services** — modern layouts, semantic code, pixel-perfect, React, NodeJS (magenta)
+- **Footer** — Sukumar (cyan) · SG Coder (magenta)
+
+---
 
 ### 🌌 WebGL Galaxy Background
-- Three.js particle starfield with 1,200+ stars, custom shaders, and depth fog
-- Mouse parallax: starfield subtly tracks cursor movement
-- GSAP ScrollTrigger: camera drifts forward as you scroll through sections
-- **Graceful 2D Canvas fallback** for devices without WebGL support
+- Three.js particle starfield with 1,200+ stars, custom shaders and depth fog
+- Mouse parallax — starfield subtly tracks cursor movement
+- GSAP ScrollTrigger — camera drifts forward as you scroll
+- Graceful **2D Canvas fallback** for devices without WebGL
+
+---
 
 ### 💼 Portfolio & Navigation
-- GitHub source code and CV pill buttons pinned to the top-right of the hero section
-- Six project cards with glassmorphism, 3D tilt on hover, live preview links
-- Tech Stack section with categorized grids and an infinite scrolling marquee strip
-- Smooth scroll with custom liquid spring cursor (dot + ring lerp system)
+- GitHub source code + CV pill buttons pinned top-right of hero section
+- Six project cards with glassmorphism panels and 3D tilt hover effect
+- Live preview + GitHub repo links on every project card
+- Tech Stack section with categorized grids and an infinite scrolling marquee
+
+---
 
 ### 💬 Google Sheets Contact Form
-- Submissions land directly in a Google Sheets database via Apps Script
-- Fully async `fetch` with instant UI feedback and animation
+- Submissions go directly to a Google Sheets database via Apps Script
+- Fully async `fetch` with instant UI feedback
 - CORS-secured deployment endpoint
 
 ---
@@ -96,41 +117,41 @@ PORTFOLIO/
 │   ├── favicon.svg          # Browser tab icon
 │   ├── shiba.glb            # 3D Shiba Inu model (GLB)
 │   └── shiba-fallback.png   # Static fallback illustration
-├── index.html               # Main page markup
+├── index.html               # Main page markup & all section content
 ├── script.js                # Three.js scenes, GSAP animations, AI chat agent
-├── style.css                # Full design system, neon highlights & component styles
-└── README.md                # Documentation
+├── style.css                # Design system, neon highlight classes, animations
+└── README.md                # Project documentation
 ```
 
 ---
 
 ## 🚀 Running Locally
 
-The project uses ES6 modules and loads local `.glb` 3D assets, so it **must** be served via a local HTTP server.
+The project loads local `.glb` 3D assets, so it **must** be served via a local HTTP server (not opened as a file directly).
 
-**Option 1 — Python (no install needed):**
+**Python (recommended):**
 ```bash
 python -m http.server 8000
 ```
 
-**Option 2 — Node.js:**
+**Node.js:**
 ```bash
 npx http-server -p 8000
 ```
 
-Then open → **[http://localhost:8000](http://localhost:8000)**
+Open → **[http://localhost:8000](http://localhost:8000)**
 
 ---
 
-## ☁️ Deployment (Vercel)
+## ☁️ Deployment
 
-This is a static site — no build step required.
+This is a static site — no build step needed.
 
-Since the GitHub repo is connected to Vercel, **every push to `main` auto-deploys** to the live URL:
+The GitHub repo is connected to Vercel, so **every `git push origin main` auto-deploys** to:
 
 🔗 **[https://sg-portfolio-nu.vercel.app](https://sg-portfolio-nu.vercel.app)**
 
-To manually redeploy:
+To manually trigger a production deploy:
 ```bash
 npx vercel --prod
 ```
@@ -144,7 +165,7 @@ npx vercel --prod
 3. **Deploy** → **New deployment** → **Web app**
    - Execute as: `Me`
    - Who has access: `Anyone`
-4. Copy the deployed Web App URL (ends in `/exec`)
+4. Copy the deployed URL (ends in `/exec`)
 5. In `script.js`, paste it into the `scriptURL` constant (~line 779)
 
 ---
