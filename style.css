@@ -2145,3 +2145,16 @@ footer {
     font-weight: 600;
     text-shadow: 0 0 8px rgba(255, 42, 117, 0.4);
 }
+
+/* 10. Animated Neon Highlight */
+.highlight-animated {
+    font-weight: 700;
+    animation: neonPulse 2s ease-in-out infinite;
+    display: inline-block;
+}
+
+@keyframes neonPulse {
+    0%   { color: var(--primary); text-shadow: 0 0 6px rgba(255,42,117,0.9), 0 0 20px rgba(255,42,117,0.5); }
+    50%  { color: var(--secondary); text-shadow: 0 0 6px rgba(0,240,255,0.9), 0 0 20px rgba(0,240,255,0.5); }
+    100% { color: var(--primary); text-shadow: 0 0 6px rgba(255,42,117,0.9), 0 0 20px rgba(255,42,117,0.5); }
+}

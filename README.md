@@ -6,7 +6,7 @@
 
 [![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-00f0ff?style=for-the-badge&logoColor=white)](https://sg-portfolio-nu.vercel.app)
 [![GitHub](https://img.shields.io/badge/GitHub-Source_Code-ff2a75?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Sg-2003/PORTFOLIO)
-[![MIT License](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](LICENSE)
+[![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://sg-portfolio-nu.vercel.app)
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
@@ -20,7 +20,7 @@
 
 ## ✨ Overview
 
-A fully handcrafted, single-page developer portfolio for **Sukumar Gope** — a Final Year B.Tech IT Student and Creative Developer from Jamshedpur. Built with zero frameworks on the front end, it features a real-time **3D WebGL scene**, an **interactive AI chat agent**, a **typewriter hero animation**, and buttery-smooth GSAP-driven micro-animations throughout.
+A fully handcrafted, single-page developer portfolio for **Sukumar Gope** — a Final Year B.Tech IT Student and Creative Developer from Jamshedpur. Built with zero front-end frameworks, it features a real-time **3D WebGL scene**, an **interactive AI chat agent**, a **typewriter hero animation**, cyber-themed neon highlights, and buttery-smooth GSAP-driven micro-animations throughout every section.
 
 ---
 
@@ -30,41 +30,46 @@ A fully handcrafted, single-page developer portfolio for **Sukumar Gope** — a 
 - A fully interactive **AI chatbot assistant** overlaid on the 3D Shiba Inu hero model
 - Floating glassmorphism chat panel with local NLP keyword matching
 - Answers questions about **skills, experience, projects, education & contact info**
-- Navigates page sections automatically on user intent (scrolls + opens tabs)
+- Auto-scrolls to page sections and opens relevant tabs on user intent
 - Triggers programmatic **CV download** directly from chat
 - Responds to 3D animation commands:
-  | Command | Action |
-  |---------|--------|
-  | `/spin` | 360° smooth horizontal spin |
-  | `/jump` | Bouncy hop animation |
-  | `/dance` | Spinning hop combo |
-  | `/shake` | Excited side-to-side waggle |
-  | `/color` | Randomizes ambient scene lighting |
+
+| Command | Action |
+|---------|--------|
+| `/spin` | 360° smooth horizontal spin |
+| `/jump` | Bouncy hop animation |
+| `/dance` | Spinning hop combo |
+| `/shake` | Excited side-to-side waggle |
+| `/color` | Randomizes ambient scene lighting |
 
 ### 🔠 Typewriter Hero Title
 - Tag-safe character-by-character typewriter cycling through:
   - **Sukumar Gope** → **a Web Developer** → **a Creative Coder** → **an IT Student**
-- Each keyword glows in theme accent colors (cyan / magenta)
-- Smooth blinking cursor with CSS animation
+- Each keyword renders in theme accent colors — cyan or magenta
+- Smooth blinking cyber cursor
+
+### 🎨 Cyber Neon Highlights
+- Key phrases throughout the page are lit with cyber accent colors:
+  - 🩵 **Cyber Cyan** (`#00f0ff`) — B.Tech IT Student, Creative Developer, passionate Software Web Developer
+  - 🌸 **Magenta** (`#ff2a75`) — SG Coder
+  - ✨ **Animated Neon Pulse** — "3D" in the hero description smoothly cycles between magenta and cyan with a glow effect
 
 ### 🌌 WebGL Galaxy Background
-- Three.js particle starfield with **1,200+ stars**, custom shaders, and fog depth
-- Mouse parallax: starfield shifts subtly as you move the cursor
+- Three.js particle starfield with 1,200+ stars, custom shaders, and depth fog
+- Mouse parallax: starfield subtly tracks cursor movement
 - GSAP ScrollTrigger: camera drifts forward as you scroll through sections
 - **Graceful 2D Canvas fallback** for devices without WebGL support
 
+### 💼 Portfolio & Navigation
+- GitHub source code and CV pill buttons pinned to the top-right of the hero section
+- Six project cards with glassmorphism, 3D tilt on hover, live preview links
+- Tech Stack section with categorized grids and an infinite scrolling marquee strip
+- Smooth scroll with custom liquid spring cursor (dot + ring lerp system)
+
 ### 💬 Google Sheets Contact Form
 - Submissions land directly in a Google Sheets database via Apps Script
-- Fully async `fetch` call with instant UI feedback and starfield contraction animation
+- Fully async `fetch` with instant UI feedback and animation
 - CORS-secured deployment endpoint
-
-### 🎨 UI / UX Highlights
-- **Glassmorphism panels** across About, Services, Portfolio & Contact
-- **Custom liquid cursor** — dot-and-ring system with spring `lerp` interpolation
-- **3D card tilt** on hover (Services & Portfolio cards) via GSAP
-- Scroll-triggered **fade + slide-up** reveal animations for every section
-- Cyber accent highlights (cyan `#00f0ff` / magenta `#ff2a75`) for key phrases
-- Responsive layout optimised for mobile, tablet, and desktop
 
 ---
 
@@ -92,8 +97,8 @@ PORTFOLIO/
 │   ├── shiba.glb            # 3D Shiba Inu model (GLB)
 │   └── shiba-fallback.png   # Static fallback illustration
 ├── index.html               # Main page markup
-├── script.js                # Three.js scenes, GSAP animations, chat agent
-├── style.css                # Full design system & component styles
+├── script.js                # Three.js scenes, GSAP animations, AI chat agent
+├── style.css                # Full design system, neon highlights & component styles
 └── README.md                # Documentation
 ```
 
@@ -101,9 +106,9 @@ PORTFOLIO/
 
 ## 🚀 Running Locally
 
-The project uses ES6 modules and loads local `.glb` 3D assets, so it **must** be served via a local HTTP server (not opened directly as a file).
+The project uses ES6 modules and loads local `.glb` 3D assets, so it **must** be served via a local HTTP server.
 
-**Option 1 — Python (recommended, no install needed):**
+**Option 1 — Python (no install needed):**
 ```bash
 python -m http.server 8000
 ```
@@ -117,46 +122,47 @@ Then open → **[http://localhost:8000](http://localhost:8000)**
 
 ---
 
-## 🔗 Deploying to Vercel
+## ☁️ Deployment (Vercel)
 
 This is a static site — no build step required.
 
-1. Push your code to GitHub (this repo)
-2. Go to [vercel.com](https://vercel.com) → **New Project** → Import the GitHub repo
-3. Framework preset: **Other** (no framework)
-4. Leave build command blank, output directory as `./`
-5. Click **Deploy** ✅
+Since the GitHub repo is connected to Vercel, **every push to `main` auto-deploys** to the live URL:
+
+🔗 **[https://sg-portfolio-nu.vercel.app](https://sg-portfolio-nu.vercel.app)**
+
+To manually redeploy:
+```bash
+npx vercel --prod
+```
 
 ---
 
 ## ⚙️ Google Sheets Contact Form Setup
-
-To connect the form to your own spreadsheet:
 
 1. Open your Google Sheet → **Extensions** → **Apps Script**
 2. Paste the `doPost(e)` handler script
 3. **Deploy** → **New deployment** → **Web app**
    - Execute as: `Me`
    - Who has access: `Anyone`
-4. Copy the deployed Web App URL (`/exec`)
-5. In `script.js`, paste it into the `scriptURL` constant (around line 779)
+4. Copy the deployed Web App URL (ends in `/exec`)
+5. In `script.js`, paste it into the `scriptURL` constant (~line 779)
 
 ---
 
 ## 👤 About the Developer
 
 **Sukumar Gope**
-- 🎓 Final Year B.Tech IT Student — *University College of Engineering & Technology, Hazaribagh*
+- 🎓 Final Year B.Tech IT — *University College of Engineering & Technology, Hazaribagh*
 - 💼 Ex-Intern @ Emertxe Pvt. Ltd. (Full Stack) & Bluestock Fintech (SDE)
-- 🌐 [GitHub](https://github.com/Sg-2003) · [LinkedIn](https://www.linkedin.com/in/sukumar-gope-9b20a81b4/) · [LeetCode](https://leetcode.com/u/SUKUMAR_GOPE/)
+- 🌐 [GitHub](https://github.com/Sg-2003) · [LinkedIn](https://www.linkedin.com/in/sukumar-gope-9b20a81b4/) · [LeetCode](https://leetcode.com/u/SUKUMAR_GOPE/) · [Portfolio](https://sg-portfolio-nu.vercel.app)
 - 📧 sgsukumar321@gmail.com
 
 ---
 
 <div align="center">
 
-Made with ❤️ and a lot of ☕ by **Sukumar Gope**
+Made with ❤️ and a lot of ☕ by **Sukumar Gope** · [SG Coder](https://github.com/Sg-2003)
 
-⭐ Star this repo if you found it helpful!
+⭐ **Star this repo** if you found it helpful!
 
 </div>
