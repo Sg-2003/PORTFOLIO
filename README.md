@@ -4,7 +4,7 @@
 
 **A premium, immersive portfolio experience built with Three.js, GSAP & Vanilla JS**
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-00f0ff?style=for-the-badge&logoColor=white)](https://sg-portfolio-dev.vercel.app)
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-00f0ff?style=for-the-badge&logoColor=white)](https://sg-portfolio-nu.vercel.app)
 [![GitHub](https://img.shields.io/badge/GitHub-Source_Code-ff2a75?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Sg-2003/PORTFOLIO)
 [![MIT License](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](LICENSE)
 
