@@ -1,172 +1,162 @@
-# Portfolio Website
+<div align="center">
 
-A modern, responsive portfolio website showcasing my skills, projects, and professional experience as a Web Developer.
+# 🚀 Sukumar Gope — Interactive 3D Developer Portfolio
 
-## 🌟 Features
+**A premium, immersive portfolio experience built with Three.js, GSAP & Vanilla JS**
 
-- **Responsive Design**: Fully responsive layout that works seamlessly on desktop, tablet, and mobile devices
-- **Interactive UI**: Smooth animations and transitions for an engaging user experience
-- **About Section**: Detailed information about skills, experience, and education
-- **Services**: Showcase of web design, UI/UX design, and app development services
-- **Portfolio**: Display of featured projects and work samples
-- **Contact Form**: Integrated contact form with Google Sheets backend for message submissions
-- **Social Media Integration**: Links to social media profiles
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-00f0ff?style=for-the-badge&logoColor=white)](https://sg-portfolio-dev.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-Source_Code-ff2a75?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Sg-2003/PORTFOLIO)
+[![MIT License](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](LICENSE)
 
-## 🛠️ Technologies Used
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat&logo=three.js&logoColor=white)
+![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=flat&logo=greensock&logoColor=black)
 
-- **HTML5**: Structure and semantic markup
-- **CSS3**: Styling, animations, and responsive design
-- **JavaScript**: Interactive functionality and form handling
-- **Font Awesome**: Icons for enhanced visual appeal
-- **Google Fonts**: Poppins font family for typography
-- **Google Apps Script**: Backend for contact form submissions
+</div>
+
+---
+
+## ✨ Overview
+
+A fully handcrafted, single-page developer portfolio for **Sukumar Gope** — a Final Year B.Tech IT Student and Creative Developer from Jamshedpur. Built with zero frameworks on the front end, it features a real-time **3D WebGL scene**, an **interactive AI chat agent**, a **typewriter hero animation**, and buttery-smooth GSAP-driven micro-animations throughout.
+
+---
+
+## 🎯 Live Features
+
+### 🐾 Interactive AI Shiba Agent (Craftz Dog)
+- A fully interactive **AI chatbot assistant** overlaid on the 3D Shiba Inu hero model
+- Floating glassmorphism chat panel with local NLP keyword matching
+- Answers questions about **skills, experience, projects, education & contact info**
+- Navigates page sections automatically on user intent (scrolls + opens tabs)
+- Triggers programmatic **CV download** directly from chat
+- Responds to 3D animation commands:
+  | Command | Action |
+  |---------|--------|
+  | `/spin` | 360° smooth horizontal spin |
+  | `/jump` | Bouncy hop animation |
+  | `/dance` | Spinning hop combo |
+  | `/shake` | Excited side-to-side waggle |
+  | `/color` | Randomizes ambient scene lighting |
+
+### 🔠 Typewriter Hero Title
+- Tag-safe character-by-character typewriter cycling through:
+  - **Sukumar Gope** → **a Web Developer** → **a Creative Coder** → **an IT Student**
+- Each keyword glows in theme accent colors (cyan / magenta)
+- Smooth blinking cursor with CSS animation
+
+### 🌌 WebGL Galaxy Background
+- Three.js particle starfield with **1,200+ stars**, custom shaders, and fog depth
+- Mouse parallax: starfield shifts subtly as you move the cursor
+- GSAP ScrollTrigger: camera drifts forward as you scroll through sections
+- **Graceful 2D Canvas fallback** for devices without WebGL support
+
+### 💬 Google Sheets Contact Form
+- Submissions land directly in a Google Sheets database via Apps Script
+- Fully async `fetch` call with instant UI feedback and starfield contraction animation
+- CORS-secured deployment endpoint
+
+### 🎨 UI / UX Highlights
+- **Glassmorphism panels** across About, Services, Portfolio & Contact
+- **Custom liquid cursor** — dot-and-ring system with spring `lerp` interpolation
+- **3D card tilt** on hover (Services & Portfolio cards) via GSAP
+- Scroll-triggered **fade + slide-up** reveal animations for every section
+- Cyber accent highlights (cyan `#00f0ff` / magenta `#ff2a75`) for key phrases
+- Responsive layout optimised for mobile, tablet, and desktop
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technologies |
+|----------|-------------|
+| **Core** | HTML5, Vanilla CSS3, ES6+ JavaScript |
+| **3D & Animation** | Three.js, GSAP, ScrollTrigger |
+| **Typography** | Google Fonts — Outfit, Space Grotesk |
+| **Icons** | FontAwesome 6 |
+| **Backend** | Google Apps Script + Google Sheets |
+| **Hosting** | Vercel |
+
+---
 
 ## 📁 Project Structure
 
 ```
 PORTFOLIO/
-├── index.html          # Main HTML file
-├── style.css           # Stylesheet
-├── script.js           # JavaScript functionality
-├── img/                # Image assets
-│   ├── sukumar.png     # Logo
-│   ├── SUKUMAR.jpg     # Profile image
-│   ├── mobile.jpg      # Mobile background
-│   ├── sg.png          # Desktop background
-│   └── ...             # Other images
-└── README.md           # Project documentation
+├── img/
+│   ├── SUKUMAR.jpg          # Profile photo
+│   ├── cv.pdf               # CV / Resume PDF
+│   ├── favicon.svg          # Browser tab icon
+│   ├── shiba.glb            # 3D Shiba Inu model (GLB)
+│   └── shiba-fallback.png   # Static fallback illustration
+├── index.html               # Main page markup
+├── script.js                # Three.js scenes, GSAP animations, chat agent
+├── style.css                # Full design system & component styles
+└── README.md                # Documentation
 ```
 
-## 🚀 Getting Started
+---
 
-### Prerequisites
+## 🚀 Running Locally
 
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- A code editor (VS Code, Sublime Text, etc.)
-- Basic knowledge of HTML, CSS, and JavaScript
+The project uses ES6 modules and loads local `.glb` 3D assets, so it **must** be served via a local HTTP server (not opened directly as a file).
 
-### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/Sg-2003/PORTFOLIO.git
-```
-
-2. Navigate to the project directory:
-```bash
-cd PORTFOLIO
-```
-
-3. Open `index.html` in your web browser:
-```bash
-# Simply double-click index.html or use a local server
-```
-
-### Running Locally
-
-You can use any local server to run the project:
-
-**Using Python:**
+**Option 1 — Python (recommended, no install needed):**
 ```bash
 python -m http.server 8000
 ```
 
-**Using Node.js (http-server):**
+**Option 2 — Node.js:**
 ```bash
-npx http-server
+npx http-server -p 8000
 ```
 
-Then open `http://localhost:8000` in your browser.
-
-## 📱 Sections
-
-### 1. Header/Home
-- Hero section with introduction
-- Navigation menu
-- Responsive mobile menu
-
-### 2. About
-- Personal introduction
-- Tabbed interface for:
-  - Skills
-  - Experience
-  - Education
-
-### 3. Services
-- Web Design
-- UI/UX Design
-- App Design
-
-### 4. Portfolio
-- Showcase of projects:
-  - Social Media App
-  - Music App
-  - Online Shopping App
-
-### 5. Contact
-- Contact information
-- Contact form with Google Sheets integration
-- Social media links
-- CV download option
-
-## 🎨 Customization
-
-To customize this portfolio for your own use:
-
-1. **Update Personal Information**: Edit the content in `index.html`
-   - Replace name, location, and bio
-   - Update contact information
-   - Modify social media links
-
-2. **Change Images**: Replace images in the `img/` folder
-   - Update logo path
-   - Replace profile picture
-   - Update background images
-
-3. **Modify Colors**: Edit color scheme in `style.css`
-   - Primary color: `#ff004f`
-   - Background: `#080808`
-   - Text colors as needed
-
-4. **Update Contact Form**: Modify Google Apps Script URL in `script.js`
-   - Create your own Google Apps Script
-   - Update the `scriptURL` variable
-
-## 📧 Contact Form Setup
-
-The contact form uses Google Apps Script for backend processing:
-
-1. Create a Google Apps Script project
-2. Set up a form handler script
-3. Deploy it as a web app
-4. Update the `scriptURL` in `script.js`
-
-## 🌐 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## 📝 License
-
-This project is open source and available for personal and commercial use.
-
-## 👤 Author
-
-**Sukumar Gope**
-- Email: sgsukumar321@gmail.com
-- Phone: 6205472377
-- Location: Jamshedpur, Jharkhand, India
-
-## 🙏 Acknowledgments
-
-- Font Awesome for icons
-- Google Fonts for typography
-- All contributors and supporters
+Then open → **[http://localhost:8000](http://localhost:8000)**
 
 ---
 
-Made with ❤️ by SG Coder
+## 🔗 Deploying to Vercel
 
+This is a static site — no build step required.
+
+1. Push your code to GitHub (this repo)
+2. Go to [vercel.com](https://vercel.com) → **New Project** → Import the GitHub repo
+3. Framework preset: **Other** (no framework)
+4. Leave build command blank, output directory as `./`
+5. Click **Deploy** ✅
+
+---
+
+## ⚙️ Google Sheets Contact Form Setup
+
+To connect the form to your own spreadsheet:
+
+1. Open your Google Sheet → **Extensions** → **Apps Script**
+2. Paste the `doPost(e)` handler script
+3. **Deploy** → **New deployment** → **Web app**
+   - Execute as: `Me`
+   - Who has access: `Anyone`
+4. Copy the deployed Web App URL (`/exec`)
+5. In `script.js`, paste it into the `scriptURL` constant (around line 779)
+
+---
+
+## 👤 About the Developer
+
+**Sukumar Gope**
+- 🎓 Final Year B.Tech IT Student — *University College of Engineering & Technology, Hazaribagh*
+- 💼 Ex-Intern @ Emertxe Pvt. Ltd. (Full Stack) & Bluestock Fintech (SDE)
+- 🌐 [GitHub](https://github.com/Sg-2003) · [LinkedIn](https://www.linkedin.com/in/sukumar-gope-9b20a81b4/) · [LeetCode](https://leetcode.com/u/SUKUMAR_GOPE/)
+- 📧 sgsukumar321@gmail.com
+
+---
+
+<div align="center">
+
+Made with ❤️ and a lot of ☕ by **Sukumar Gope**
+
+⭐ Star this repo if you found it helpful!
+
+</div>

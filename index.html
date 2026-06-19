@@ -3,170 +3,713 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Sukumar Gope | Web Developer & Creative Coder</title>
+    <meta name="description" content="Sukumar Gope - B.Tech IT Student & Creative Developer from Jamshedpur. Building immersive 3D digital experiences with Three.js, React, and Node.js.">
+    <meta name="keywords" content="Sukumar Gope, Web Developer, Three.js, Portfolio, React, JavaScript, UI/UX">
+    <meta name="author" content="Sukumar Gope">
+    <meta property="og:title" content="Sukumar Gope | Web Developer & Creative Coder">
+    <meta property="og:description" content="Creative Developer building immersive 3D digital experiences.">
+    <meta property="og:type" content="website">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./img/favicon.svg">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css?v=9">
 </head>
 <body>
-    <div id="header">
-        <div class="container">
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">SG</div>
+            <div class="loader-bar"><div class="loader-progress"></div></div>
+            <p class="loader-text">Initializing Experience...</p>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div id="custom-cursor"></div>
+    <div id="custom-cursor-dot"></div>
+
+    <!-- WebGL Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="#home" class="logo-link" id="logo-link">
+                <canvas id="logo-canvas" width="44" height="44"></canvas>
+                <span class="logo-text" data-value="SG.DEV">SG.DEV</span>
+            </a>
             <nav>
-                <img src="img/sukumar.png" class="logo" alt="Logo">
                 <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#techstack" class="nav-link">Tech</a></li>
+                    <li><a href="#portfolio" class="nav-link">Work</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <i class="fas fa-times close-menu" onclick="closemenu()"></i>
                 </ul>
-                <i class="fas fa-bars" onclick="openmenu()"></i>
+                <i class="fas fa-bars open-menu" onclick="openmenu()"></i>
             </nav>
-            <div class="header-text">
-                <p>WEB DEVELOPER</p>
-                <h1>Hi, I'm <span> Sukumar</span><br>Gope from Jamshedpur</h1> 
-            </div>
         </div>
-    </div>
-    <!-- ---------------------about------------------------------ -->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="img/SUKUMAR.jpg" alt="Sukumar Gope">
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <!-- Top-Right Social & CV Links -->
+            <div class="home-socials-right">
+                <a href="https://github.com/Sg-2003/PORTFOLIO" target="_blank" title="Source Code" class="home-social-link" id="home-github-btn">
+                    <i class="fa-brands fa-github"></i>
+                    <span>Source Code</span>
+                </a>
+                <a href="img/cv.pdf" target="_blank" title="View CV" class="home-social-link" id="home-cv-btn">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <span>View CV</span>
+                </a>
+            </div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge">Available for Projects</div>
+                    <p class="hero-subtitle">WEB DEVELOPER & DESIGNER</p>
+                    <h1 class="hero-title">Hi, I'm <span id="typewriter-text"><span>Sukumar</span> Gope</span><span class="typewriter-cursor">|</span></h1>
+                    <p class="hero-desc"><span class="highlight-secondary">B.Tech IT Student</span> &amp; <span class="highlight-secondary">Creative Developer</span> based in Jamshedpur. I build immersive, interactive 3D digital experiences bridging code and aesthetics.</p>
+                    <div class="hero-actions">
+                        <a href="#portfolio" class="btn btn-primary">Explore Work <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                    </div>
                 </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>Hi, Sukumar Gope this side. I'm a Software Web Developer by using the basics of Programming languages 
-                       like :- Html, Css, Javascript, Python, Java, C, C++ and the latest technology of AI and ML. I explore the 
-                       things and give it to the shape of it. Well, I'm from Jamshedpur City, Jharkhand (India).Curently, I'm
-                       studying in Btech 2nd Year at University college of Engineering and Technology, Hazaribagh (825301).
-                       I'm Pursuing my study in IT (Information Technology) Branch.
-                    </p>
-                    <div class="tab-titles">
-                      <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                      <p class="tab-links" onclick="opentab('experience')">Exprience</p>
-                      <p class="tab-links" onclick="opentab('education')">Education</p>
+                <div class="hero-3d">
+                    <div id="hero-canvas-container"></div>
+                    <div class="shiba-speech-bubble" id="shiba-bubble">
+                        <div class="bubble-content">Hey! Click me to chat! 🐾</div>
+                        <div class="bubble-arrow"></div>
                     </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Web Dev</span><br>Web Developing Interface</li>
-                            <li><span>App Dev</span><br>App Developing Interface</li>
-                            <li><span>UI/UX Designer</span><br>Designing Web/App Interface</li>
-                        </ul>
+                </div>
+            </div><!-- /.hero-container -->
+
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Scroll Down</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="sub-title">About Me</h2>
+                    <div class="title-bar"></div>
+                </div>
+                <div class="row about-row">
+                    <div class="about-col-1">
+                        <div class="img-wrapper">
+                            <img src="./img/SUKUMAR.jpg" alt="Sukumar Gope Profile" onerror="this.src='./img/SUKUMAR.jpg'">
+                            <div class="glowing-border"></div>
+                        </div>
                     </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>2021 - Current</span><br>UI/UX Design Training at IT Company.</li>
-                            <li><span>2019 - 2021</span><br>Learn Web Development at Auto Cluster Limited.</li>
-                            <li><span>2017 - 2019</span><br>Intern App Development at LLC.</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2012 - 2020</span><br>Completed 10th at Netaji Subhash Chandra High School, Kalikapur.</li>
-                            <li><span>2020 - 2023</span><br>Diploma at Govt. Polytechnic, Kharsawan</li>
-                            <li><span>2023 - Current</span><br>Pursuing B.Tech at UCET, Hazaribagh (825301)</li>
-                        </ul>
+                    <div class="about-col-2 glass-panel">
+                        <p class="about-intro">
+                            Hello! I am <strong>Sukumar Gope</strong>, a <span class="highlight-secondary">passionate Software Web Developer</span> and <span class="highlight-secondary">Final Year B.Tech IT Student</span> at the <strong>University College of Engineering and Technology, Hazaribagh</strong>. 
+                        </p>
+                        <p class="about-desc">
+                            I leverage fundamental programming languages—including <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>Python</strong>, <strong>Java</strong>, <strong>C</strong>, and <strong>C++</strong>—alongside modern <strong>AI & ML technologies</strong> to build intuitive, creative, and robust software solutions. I enjoy taking abstract concepts and breathing life into them on the web.
+                        </p>
+                        
+                        <div class="tab-titles">
+                            <button class="tab-links active-link" onclick="opentab('skills')">Skills</button>
+                            <button class="tab-links" onclick="opentab('experience')">Experience</button>
+                            <button class="tab-links" onclick="opentab('education')">Education</button>
+                        </div>
+
+                        <!-- Tab Content: Skills -->
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul class="skills-grid">
+                                <li>
+                                    <div class="skill-info">
+                                        <span>Web Development</span>
+                                        <i class="fa-solid fa-code"></i>
+                                    </div>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">HTML5</span>
+                                        <span class="skill-tag">CSS3</span>
+                                        <span class="skill-tag">JS</span>
+                                        <span class="skill-tag">Three.js</span>
+                                        <span class="skill-tag">ES6+</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="skill-info">
+                                        <span>App Development</span>
+                                        <i class="fa-brands fa-app-store-ios"></i>
+                                    </div>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">React</span>
+                                        <span class="skill-tag">Node.js</span>
+                                        <span class="skill-tag">Frontend Architecture</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="skill-info">
+                                        <span>UI/UX Design</span>
+                                        <i class="fa-solid fa-palette"></i>
+                                    </div>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">Figma</span>
+                                        <span class="skill-tag">Wireframing</span>
+                                        <span class="skill-tag">Responsive Layouts</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="skill-info">
+                                        <span>Languages & Core</span>
+                                        <i class="fa-solid fa-terminal"></i>
+                                    </div>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">Python</span>
+                                        <span class="skill-tag">Java</span>
+                                        <span class="skill-tag">C</span>
+                                        <span class="skill-tag">C++</span>
+                                        <span class="skill-tag">Algorithms</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Tab Content: Experience -->
+                        <div class="tab-contents" id="experience">
+                            <ul class="timeline">
+                                <li>
+                                    <span class="timeline-date">Aug 2025 - Dec 2025</span>
+                                    <h4 class="timeline-title">Full Stack Developer Intern</h4>
+                                    <p class="timeline-subtitle">Emertxe Pvt. Ltd.</p>
+                                    <p class="timeline-detail">Developed interactive and responsive full-stack applications using React, Node.js, and JavaScript. Built and structured modular REST APIs and optimized database schemas for smooth client-server interactions.</p>
+                                </li>
+                                <li>
+                                    <span class="timeline-date">Apr 2025 - Jun 2025</span>
+                                    <h4 class="timeline-title">Software Development Engineer (SDE) Intern</h4>
+                                    <p class="timeline-subtitle">Bluestock Fintech</p>
+                                    <p class="timeline-detail">Implemented backend services, integrated API endpoints, and solved software engineering bottlenecks. Contributed to clean, reusable codebase logic with a strong focus on Data Structures and Algorithms (DSA).</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Tab Content: Education -->
+                        <div class="tab-contents" id="education">
+                            <ul class="timeline">
+                                <li>
+                                    <span class="timeline-date">2023 - 2026</span>
+                                    <h4 class="timeline-title">B.Tech in Information Technology (Lateral Entry)</h4>
+                                    <p class="timeline-subtitle">University College of Engineering and Technology, Hazaribagh</p>
+                                    <p class="timeline-detail">Expected Graduation: 2026. Specialized curriculum focusing on Software Engineering, Data Structures & Algorithms, Database Management, and Web Graphics.</p>
+                                </li>
+                                <li>
+                                    <span class="timeline-date">2020 - 2023</span>
+                                    <h4 class="timeline-title">Diploma in Computer Engineering</h4>
+                                    <p class="timeline-subtitle">Government Polytechnic, Kharsawan</p>
+                                    <p class="timeline-detail">Graduated in 2023. Built core technical foundations in Computer Science, Systems Programming, Networking, and Object-Oriented Languages.</p>
+                                </li>
+                                <li>
+                                    <span class="timeline-date">2012 - 2020</span>
+                                    <h4 class="timeline-title">10th Matriculation</h4>
+                                    <p class="timeline-subtitle">Netaji Subhash Chandra High School, Kalikapur</p>
+                                    <p class="timeline-detail">Completed primary and secondary education with focus on Science and Mathematics.</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- ---------------------Services---------------------- -->
-    <div id="services">
-        <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web Design</h2>
-                    <p>I have been working on the web design from last 3 months, I greatly loved to design websites and learn new things and give shape of it.</p>
-                    <a href="#">Learn More</a>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="sub-title">My Services</h2>
+                    <div class="title-bar"></div>
                 </div>
-                <div>
-                    <i class="fa-solid fa-crop"></i>
-                    <h2>UI/UX Design</h2>
-                    <p>I can maintain the website design and handle it and magnifying its hosting to the browser.</p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div>
-                    <i class="fa-brands fa-app-store"></i>
-                    <h2>App Design</h2>
-                    <p>App design is based on React Js, node js and some other components.</p>
-                    <a href="#">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ---------------------Portfolio---------------------- -->
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="img/social_media.jpg" alt="Social Media App">
-                    <div class="layer">
-                        <h3>Social Media App</h3>
-                        <p>The app connects you to the talented people around the world.
-                            Download it from play store.</p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                <div class="services-list">
+                    <div class="service-card glass-panel" data-tilt>
+                        <div class="service-3d-container" id="service-3d-web"></div>
+                        <div class="service-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h2>Web Design</h2>
+                        <p>I have been designing and building websites for months. I love crafting modern, interactive layouts, writing clean semantic code, and experimenting with new technologies.</p>
+                        <a href="#contact" class="service-link">Inquire <i class="fas fa-chevron-right"></i></a>
                     </div>
-                </div>
-                <div class="work">
-                    <img src="https://media.istockphoto.com/id/1471820084/photo/top-view-of-smartphone-with-music-player-app-on-white-stone-office-desktop.webp?b=1&s=170667a&w=0&k=20&c=Kng5hCEBXgzc9Rv6WNOfCWTVtoJJBk0Hil-QCOAU3Vc=" alt="Music App">
-                    <div class="layer">
-                        <h3>Music App</h3>
-                        <p>This app provides you various types of latest songs across the world.
-                            Enjoy the newly downloaded songs.</p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    <div class="service-card glass-panel" data-tilt>
+                        <div class="service-3d-container" id="service-3d-uiux"></div>
+                        <div class="service-icon">
+                            <i class="fa-solid fa-crop-simple"></i>
+                        </div>
+                        <h2>UI/UX Design</h2>
+                        <p>I design pixel-perfect layouts, ensure proper responsive structures, and set up domains and hosting infrastructure to deploy finished sites to the browser.</p>
+                        <a href="#contact" class="service-link">Inquire <i class="fas fa-chevron-right"></i></a>
                     </div>
-                </div>
-                <div class="work">
-                    <img src="https://media.istockphoto.com/id/1200117474/photo/shopping-online-buy-in-online-shop.jpg?s=612x612&w=0&k=20&c=B5RGgpcSOux_M78h9H3HcKeeGn5grfU5GpH5yaJKCRo=" alt="Online Shopping App">
-                    <div class="layer">
-                        <h3>Online Shopping App</h3>
-                        <p>Here you can see the trending products among the whole world.
-                            Go and purchase them.</p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    <div class="service-card glass-panel" data-tilt>
+                        <div class="service-3d-container" id="service-3d-app"></div>
+                        <div class="service-icon">
+                            <i class="fa-brands fa-app-store"></i>
+                        </div>
+                        <h2>App Design</h2>
+                        <p>I build structured web and mobile interfaces using component-driven frameworks like React, NodeJS, and modern visual libraries.</p>
+                        <a href="#contact" class="service-link">Inquire <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn">See More</a>
-        </div>
-    </div>
-    <!-- ---------------------Contact------------------------------ -->
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-paper-plane"></i> sgsukumar321@gmail.com</p>
-                    <p><i class="fa-solid fa-phone"></i> 6205472377</p>
-                    <div class="social-icons">
-                        <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-                        <a href=""><i class="fa-brands fa-twitter-square"></i></a>
-                        <a href=""><i class="fa-brands fa-instagram"></i></a>
-                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                    </div>
-                    <a href="img/SG-RESUME.pdf" download class="btn btn2">Download CV</a>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="techstack" class="techstack-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="sub-title">Tech Stack</h2>
+                    <div class="title-bar"></div>
+                    <p class="section-desc">Technologies and tools I use to build modern, scalable applications.</p>
                 </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Enter your name.." required>
-                        <input type="email" name="E-Mail" placeholder="Enter your email.." required>
-                        <textarea name="Message" placeholder="Your Message" rows="6"></textarea>
-                        <button type="submit" class="btn btn2">submit</button>
-                    </form>
-                    <span id="msg"></span>
+
+                <!-- Category: Languages -->
+                <div class="tech-category">
+                    <h3 class="tech-category-title"><i class="fa-solid fa-code"></i> Languages</h3>
+                    <div class="tech-grid">
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                            <span>Java</span>
+                        </div>
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/npm/@programming-languages-logos/c/c.svg" alt="C">
+                            <span>C</span>
+                        </div>
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+                            <span>C++</span>
+                        </div>
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                            <span>HTML5</span>
+                        </div>
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                            <span>CSS3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: Frameworks & Libraries -->
+                <div class="tech-category">
+                    <h3 class="tech-category-title"><i class="fa-solid fa-layer-group"></i> Frameworks & Libraries</h3>
+                    <div class="tech-grid">
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                            <span>React</span>
+                        </div>
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                            <span>Node.js</span>
+                        </div>
+                        <div class="tech-card">
+                            <img src="https://cdn.simpleicons.org/express/ffffff" alt="Express.js">
+                            <span>Express.js</span>
+                        </div>
+                        <div class="tech-card">
+                            <img src="https://cdn.simpleicons.org/socketdotio/ffffff" alt="Socket.io">
+                            <span>Socket.io</span>
+                        </div>
+                        <div class="tech-card tech-card--threejs">
+                            <svg viewBox="0 0 32 32" width="48" height="48" fill="currentColor"><path d="M.7 0L0 2.6 12.8 32l2.7-1L4.3 5.6l22.1 9.1.8-2.5L.7 0zm30.6 29.4L18.5 0l-2.7 1 11.2 25.5L4.9 17.4l-.8 2.5 27.2 9.5z"/></svg>
+                            <span>Three.js</span>
+                        </div>
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS">
+                            <span>Tailwind CSS</span>
+                        </div>
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap">
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: Databases -->
+                <div class="tech-category">
+                    <h3 class="tech-category-title"><i class="fa-solid fa-database"></i> Databases</h3>
+                    <div class="tech-grid">
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                            <span>MySQL</span>
+                        </div>
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg" alt="Firebase">
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: Tools & Platforms -->
+                <div class="tech-category">
+                    <h3 class="tech-category-title"><i class="fa-solid fa-screwdriver-wrench"></i> Tools & Platforms</h3>
+                    <div class="tech-grid">
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                            <span>Git</span>
+                        </div>
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="icon-invert">
+                            <span>GitHub</span>
+                        </div>
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
+                            <span>VS Code</span>
+                        </div>
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+                            <span>Figma</span>
+                        </div>
+                        <div class="tech-card tech-card--vercel">
+                            <svg viewBox="0 0 1155 1000" width="48" height="48" fill="currentColor" aria-label="Vercel">
+                                <path d="M577.344 0L1154.69 1000H0L577.344 0Z"/>
+                            </svg>
+                            <span>Vercel</span>
+                        </div>
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman">
+                            <span>Postman</span>
+                        </div>
+                        <div class="tech-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="npm">
+                            <span>npm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Infinite Marquee Strip -->
+                <div class="tech-marquee-wrap">
+                    <div class="tech-marquee">
+                        <div class="tech-marquee-track">
+                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"> JavaScript</span>
+                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"> React</span>
+                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"> Node.js</span>
+                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"> Python</span>
+                            <span><svg viewBox="0 0 32 32" fill="currentColor" style="width:18px; height:18px; display:inline-block; vertical-align:middle;"><path d="M.7 0L0 2.6 12.8 32l2.7-1L4.3 5.6l22.1 9.1.8-2.5L.7 0zm30.6 29.4L18.5 0l-2.7 1 11.2 25.5L4.9 17.4l-.8 2.5 27.2 9.5z"/></svg> Three.js</span>
+                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"> MongoDB</span>
+                            <span><img src="https://cdn.simpleicons.org/express/ffffff" alt="Express"> Express</span>
+                            <span><img src="https://cdn.simpleicons.org/socketdotio/ffffff" alt="Socket.io"> Socket.io</span>
+                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"> Git</span>
+                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"> Figma</span>
+                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind"> Tailwind</span>
+                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"> MySQL</span>
+                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg" alt="Firebase"> Firebase</span>
+                            <span><svg viewBox="0 0 1155 1000" width="18" height="18" fill="currentColor" style="display:inline-block;vertical-align:middle"><path d="M577.344 0L1154.69 1000H0L577.344 0Z"/></svg> Vercel</span>
+                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"> HTML5</span>
+                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"> CSS3</span>
+                            
+                            <!-- Duplicate for seamless loop -->
+                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"> JavaScript</span>
+                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"> React</span>
+                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"> Node.js</span>
+                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"> Python</span>
+                            <span><svg viewBox="0 0 32 32" fill="currentColor" style="width:18px; height:18px; display:inline-block; vertical-align:middle;"><path d="M.7 0L0 2.6 12.8 32l2.7-1L4.3 5.6l22.1 9.1.8-2.5L.7 0zm30.6 29.4L18.5 0l-2.7 1 11.2 25.5L4.9 17.4l-.8 2.5 27.2 9.5z"/></svg> Three.js</span>
+                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"> MongoDB</span>
+                            <span><img src="https://cdn.simpleicons.org/express/ffffff" alt="Express"> Express</span>
+                            <span><img src="https://cdn.simpleicons.org/socketdotio/ffffff" alt="Socket.io"> Socket.io</span>
+                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"> Git</span>
+                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"> Figma</span>
+                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind"> Tailwind</span>
+                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"> MySQL</span>
+                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg" alt="Firebase"> Firebase</span>
+                            <span><svg viewBox="0 0 1155 1000" width="18" height="18" fill="currentColor" style="display:inline-block;vertical-align:middle"><path d="M577.344 0L1154.69 1000H0L577.344 0Z"/></svg> Vercel</span>
+                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"> HTML5</span>
+                            <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"> CSS3</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Portfolio Work Section -->
+        <section id="portfolio" class="portfolio-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="sub-title">My Work</h2>
+                    <div class="title-bar"></div>
+                </div>
+                <div class="work-list">
+                    <!-- Project 1: Flight Booking System -->
+                    <div class="work-card glass-panel" data-tilt>
+                        <div class="work-img-container">
+                            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80" alt="Flight Booking System">
+                        </div>
+                        <div class="work-info">
+                            <h3>Flight Booking System</h3>
+                            <p>A web-based airline flight seat selection and reservation system with interactive seating charts, responsive pricing, and checkout views.</p>
+                            <div class="work-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="work-actions">
+                                <a href="https://github.com/Sg-2003/Flight-Booking-System" target="_blank" class="work-link"><i class="fa-brands fa-github"></i> Repository</a>
+                                <a href="https://react-project-jeqx.vercel.app" target="_blank" class="work-preview-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Preview</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2: AI Image Generator -->
+                    <div class="work-card glass-panel" data-tilt>
+                        <div class="work-img-container">
+                            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600&q=80" alt="AI Image Generator">
+                        </div>
+                        <div class="work-info">
+                            <h3>AI Image Generator</h3>
+                            <p>An interactive image generation application integrating neural APIs to translate text prompts into custom graphics assets.</p>
+                            <div class="work-tags">
+                                <span>JavaScript</span>
+                                <span>API Integration</span>
+                                <span>CSS Grid</span>
+                            </div>
+                            <div class="work-actions">
+                                <a href="https://github.com/Sg-2003/AI-Image-Generator" target="_blank" class="work-link"><i class="fa-brands fa-github"></i> Repository</a>
+                                <a href="https://client-flame-nine-43.vercel.app/" target="_blank" class="work-preview-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Preview</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3: QuickChat OpenAI -->
+                    <div class="work-card glass-panel" data-tilt>
+                        <div class="work-img-container">
+                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" alt="QuickChat OpenAI">
+                        </div>
+                        <div class="work-info">
+                            <h3>QuickChat OpenAI</h3>
+                            <p>A fast AI chatbot client built using GPT models with chat history, streaming responses, and responsive layouts.</p>
+                            <div class="work-tags">
+                                <span>OpenAI API</span>
+                                <span>ES6+ JS</span>
+                                <span>UI Design</span>
+                            </div>
+                            <div class="work-actions">
+                                <a href="https://github.com/Sg-2003/QuickChat-OpenAI" target="_blank" class="work-link"><i class="fa-brands fa-github"></i> Repository</a>
+                                <a href="https://quick-chat-open-ai.vercel.app/" target="_blank" class="work-preview-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Preview</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 4: Chat App Socket.io -->
+                    <div class="work-card glass-panel" data-tilt>
+                        <div class="work-img-container">
+                            <img src="https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&w=600&q=80" alt="Chat App Socket.io">
+                        </div>
+                        <div class="work-info">
+                            <h3>Chat App Socket.io</h3>
+                            <p>Real-time group chat platform enabling multi-room chat sessions, status alerts, and instant WebSocket notifications.</p>
+                            <div class="work-tags">
+                                <span>Node.js</span>
+                                <span>Socket.io</span>
+                                <span>Express</span>
+                            </div>
+                            <div class="work-actions">
+                                <a href="https://github.com/Sg-2003/Chat-App-Socket.io" target="_blank" class="work-link"><i class="fa-brands fa-github"></i> Repository</a>
+                                <a href="https://chat-app-socket-io-iota.vercel.app" target="_blank" class="work-preview-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Preview</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 5: HomelyHub Web -->
+                    <div class="work-card glass-panel" data-tilt>
+                        <div class="work-img-container">
+                            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=600&q=80" alt="HomelyHub Web">
+                        </div>
+                        <div class="work-info">
+                            <h3>HomelyHub Web</h3>
+                            <p>Modern property search and real estate finder portal with catalog filters, layout sorting, and interactive details.</p>
+                            <div class="work-tags">
+                                <span>React</span>
+                                <span>CSS Modules</span>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="work-actions">
+                                <a href="https://github.com/Sg-2003/HomelyHub-Web" target="_blank" class="work-link"><i class="fa-brands fa-github"></i> Repository</a>
+                                <a href="https://homelyhub-frontend-tau.vercel.app" target="_blank" class="work-preview-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Preview</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 6: EMS-2026 -->
+                    <div class="work-card glass-panel" data-tilt>
+                        <div class="work-img-container">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="EMS-2026">
+                        </div>
+                        <div class="work-info">
+                            <h3>EMS-2026</h3>
+                            <p>A full-featured Employee Management System dashboard tracking employee directories, task lists, and work records.</p>
+                            <div class="work-tags">
+                                <span>JavaScript</span>
+                                <span>NodeJS</span>
+                                <span>CSS Grid</span>
+                            </div>
+                            <div class="work-actions">
+                                <a href="https://github.com/Sg-2003/EMS-2026" target="_blank" class="work-link"><i class="fa-brands fa-github"></i> Repository</a>
+                                <a href="https://employee-management-system-2026.vercel.app/" target="_blank" class="work-preview-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Preview</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="btn-container">
+                    <a href="https://github.com/Sg-2003" target="_blank" class="btn btn-secondary">See More Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="row contact-row">
+                    <div class="contact-left glass-panel">
+                        <h2 class="sub-title">Contact Me</h2>
+                        <div class="title-bar"></div>
+                        <p class="contact-intro-text">Have a project in mind, or just want to chat? Reach out using the form or check my coordinates below!</p>
+                        
+                        <div class="contact-info-list">
+                            <div class="contact-info-item">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <div>
+                                    <h4>Email Me</h4>
+                                    <p><a href="mailto:sgsukumar321@gmail.com">sgsukumar321@gmail.com</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <div>
+                                    <h4>Call Me</h4>
+                                    <p><a href="tel:+916205472377">+91 6205472377</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-icons">
+                            <a href="https://leetcode.com/u/SUKUMAR_GOPE/" target="_blank" aria-label="LeetCode">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                    <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/Sg-2003" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.geeksforgeeks.org/profile/sukumar_gope" target="_blank" aria-label="GeeksforGeeks">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                    <path d="M5.665 5.823c-.667 0-1.247.08-1.741.241-.495.161-.93.356-1.308.583l-.342-.566h-.666l-.075 4.132h.683a11.2 11.2 0 0 1 .433-1.341c.172-.445.394-.842.666-1.192a3.02 3.02 0 0 1 1-.833c.389-.21.855-.316 1.4-.316.594 0 1.124.122 1.59.366.467.24.873.597 1.217 1.075.339.461.6 1.036.783 1.724.184.69.275 1.458.275 2.308 0 .192-.006.38-.017.567H0v.608c.133.016.314.044.541.083.222.033.403.083.542.15a.748.748 0 0 1 .358.358c.067.15.1.328.1.534v.916c0 .666-.003 1.116-.008 1.35a22.14 22.14 0 0 1-.033.574 12.57 12.57 0 0 0 2.207.767 9.138 9.138 0 0 0 2.158.266c.755 0 1.483-.141 2.183-.425a5.46 5.46 0 0 0 1.832-1.208 5.815 5.815 0 0 0 1.258-1.924 6.09 6.09 0 0 0 .389-1.441h.946c.075.511.204.992.389 1.44.31.756.73 1.398 1.258 1.925a5.46 5.46 0 0 0 1.833 1.208c.7.284 1.427.425 2.182.425.705 0 1.425-.089 2.158-.266a12.57 12.57 0 0 0 2.208-.767c-.012-.15-.023-.341-.034-.575a66.751 66.751 0 0 1-.008-1.35v-.915c0-.206.033-.384.1-.534a.748.748 0 0 1 .358-.358c.14-.067.32-.117.542-.15.228-.039.408-.067.541-.083v-.608h-9.563a9.108 9.108 0 0 1-.017-.567c0-.85.092-1.619.275-2.308.183-.688.444-1.263.783-1.724.344-.478.75-.836 1.216-1.075.467-.244.997-.366 1.592-.366.544 0 1.01.105 1.399.316a3.02 3.02 0 0 1 1 .833c.272.35.494.747.666 1.192.133.344.256.76.433 1.341h.683l-.075-4.132h-.666l-.342.566c-.378-.227-.813-.422-1.308-.583-.494-.161-1.074-.241-1.741-.241z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.hackerrank.com/profile/sgsukumar321" target="_blank" aria-label="HackerRank" class="social-hackerrank">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                    <path d="M12 0c1.285 0 9.75 4.886 10.392 6 .645 1.115.645 11.885 0 13-.642 1.115-9.107 6-10.392 6-1.284 0-9.75-4.885-10.392-6C.963 17.885.963 7.115 1.608 6 2.25 4.886 10.715 0 12 0zm2.295 6.799c-.141 0-.258.115-.258.258v3.875H9.963V6.908h.701a.254.254 0 0 0 .231-.361l-1.575-3.15a.255.255 0 0 0-.464.006L7.3 6.545a.255.255 0 0 0 .232.363h.692v10.184h-.701a.254.254 0 0 0-.231.361l1.555 3.106a.255.255 0 0 0 .464-.006l1.572-3.1a.255.255 0 0 0-.232-.361h-.692v-3.834h4.074v3.693h-.699a.254.254 0 0 0-.233.354l1.558 3.112a.255.255 0 0 0 .463-.003l1.577-3.109a.254.254 0 0 0-.23-.354h-.695V7.057h.695a.255.255 0 0 0 .23-.355L15.336 3.6a.255.255 0 0 0-.463.003l-1.336 2.838a.254.254 0 0 0 .233.358h.525z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/sukumar-gope-9b20a81b4/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                        
+                        <a href="img/cv.pdf" download="Sukumar_Gope_CV.pdf" class="btn btn-primary btn-cv">
+                            Download CV <i class="fa-solid fa-download"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="contact-right glass-panel">
+                        <form name="submit-to-google-sheet">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="Name" placeholder="Sukumar Gope" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="E-Mail" placeholder="name@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="Message" placeholder="Hello! I would love to collaborate on..." rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                Send Message <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
         <div class="copyright">
-            <p>Copyright © Sukumar. Made with <i class="fas fa-heart"></i> by SG Coder</p>
+            <p>Copyright &copy; Sukumar. Designed & Built with <i class="fas fa-heart"></i> by SG Coder &copy; 2026</p>
+        </div>
+    </footer>
+
+    <!-- AI Agent Chat Widget -->
+    <div class="ai-agent-widget" id="ai-agent-widget">
+        <button class="ai-widget-toggle" id="ai-widget-toggle" aria-label="Chat with AI Agent">
+            <i class="fa-solid fa-dog"></i>
+            <span class="toggle-text">Chat with Craftz Dog</span>
+            <span class="notification-ping"></span>
+        </button>
+        
+        <div class="ai-chat-window glass-panel" id="ai-chat-window">
+            <div class="chat-header">
+                <div class="chat-header-avatar">
+                    <i class="fa-solid fa-dog"></i>
+                </div>
+                <div class="chat-header-info">
+                    <h3>Craftz Dog</h3>
+                    <span class="chat-status"><span class="status-dot"></span> Online AI Agent</span>
+                </div>
+                <button class="chat-close" id="chat-close" aria-label="Close Chat">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <div class="chat-messages" id="chat-messages">
+                <!-- Messages will be dynamically inserted here -->
+            </div>
+            
+            <div class="chat-suggestions" id="chat-suggestions">
+                <button class="suggestion-btn" data-query="Who are you?">Who are you?</button>
+                <button class="suggestion-btn" data-query="What are Sukumar's skills?">What are Sukumar's skills?</button>
+                <button class="suggestion-btn" data-query="Show me your 3D tricks!">Show me your 3D tricks! 🌀</button>
+                <button class="suggestion-btn" data-query="How can I contact Sukumar?">How can I contact Sukumar?</button>
+            </div>
+            
+            <form class="chat-input-form" id="chat-input-form">
+                <input type="text" id="chat-input" placeholder="Type a message or command (e.g. /spin)..." autocomplete="off" required>
+                <button type="submit" class="chat-send-btn" aria-label="Send Message">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
         </div>
     </div>
-    <script src="script.js"></script>
+
+    <!-- Three.js and GSAP via CDNs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/DRACOLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Custom Scripts -->
+    <script src="script.js?v=4"></script>
 </body>
 </html>
-
