@@ -31,7 +31,7 @@ A fully handcrafted, single-page developer portfolio for **Sukumar Gope** — a 
 - Glassmorphism chat panel with local NLP keyword-matching
 - Answers questions about skills, experience, projects, education & contact info
 - Auto-scrolls to sections and opens tabs based on user intent
-- Triggers programmatic **CV download** directly from chat
+- Direct access to the **Interactive Resume** directly from chat
 
 **3D Animation Commands:**
 
@@ -80,7 +80,7 @@ A consistent color language applied across all sections:
 ---
 
 ### 💼 Portfolio & Navigation
-- GitHub source code + CV pill buttons pinned top-right of hero section
+- GitHub source code + Resume pill buttons pinned top-right of hero section
 - Six project cards with glassmorphism panels and 3D tilt hover effect
 - Live preview + GitHub repo links on every project card
 - Tech Stack section with categorized grids and an infinite scrolling marquee
@@ -113,11 +113,12 @@ A consistent color language applied across all sections:
 PORTFOLIO/
 ├── img/
 │   ├── SUKUMAR.jpg          # Profile photo
-│   ├── cv.pdf               # CV / Resume PDF
+│   ├── cv.pdf               # CV / Resume PDF (Backup)
 │   ├── favicon.svg          # Browser tab icon
 │   ├── shiba.glb            # 3D Shiba Inu model (GLB)
 │   └── shiba-fallback.png   # Static fallback illustration
 ├── index.html               # Main page markup & all section content
+├── resume.html              # Interactive Web Resume (ATS & Print Optimized)
 ├── script.js                # Three.js scenes, GSAP animations, AI chat agent
 ├── style.css                # Design system, neon highlight classes, animations
 └── README.md                # Project documentation

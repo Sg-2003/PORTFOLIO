@@ -1038,40 +1038,10 @@ if (document.readyState === "complete") {
 }
 
 // ==========================================
-// 12. PROGRAMMATIC RESILIENT CV DOWNLOAD
+// 12. INTERACTIVE RESUME LINK HANDLING
 // ==========================================
-const cvBtn = document.querySelector(".btn-cv");
-if (cvBtn) {
-    cvBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        
-        const fileURL = cvBtn.getAttribute("href");
-        const fileName = cvBtn.getAttribute("download") || "Sukumar_Gope_CV.pdf";
-        
-        fetch(fileURL)
-            .then(response => {
-                if (!response.ok) throw new Error("Network response was not ok");
-                return response.blob();
-            })
-            .then(blob => {
-                const file = new File([blob], fileName, { type: "application/pdf" });
-                const url = window.URL.createObjectURL(file);
-                
-                const tempLink = document.createElement("a");
-                tempLink.href = url;
-                tempLink.download = fileName;
-                document.body.appendChild(tempLink);
-                tempLink.click();
-                
-                document.body.removeChild(tempLink);
-                window.URL.revokeObjectURL(url);
-            })
-            .catch(error => {
-                console.error("Programmatic download failed, falling back to default download:", error);
-                window.open(fileURL, "_blank");
-            });
-    });
-}
+// Programmatic PDF download code is removed since we have migrated to an interactive HTML resume (resume.html).
+// Clicking the resume buttons now natively opens resume.html in a new tab.
 
 // ==========================================
 // 13. AI SHIBA AGENT INTERACTIVE LOGIC
@@ -1261,8 +1231,8 @@ function getShibaResponse(query) {
     
     if (contains(['cv', 'resume', 'download cv', 'pdf'])) {
         return {
-            text: "Absolutely! You can download Sukumar's professional CV directly right here. It includes all his credentials. 📑",
-            actions: [{ text: "Download CV 📥", type: "download-cv" }]
+            text: "Absolutely! You can view Sukumar's professional resume directly right here. It includes all his credentials. 📑",
+            actions: [{ text: "View Resume 📄", type: "download-cv" }]
         };
     }
     
