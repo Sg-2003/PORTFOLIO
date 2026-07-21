@@ -1190,14 +1190,14 @@ function getShibaResponse(query) {
         };
     }
     
-    if (contains(['project', 'work', 'portfolio', 'built', 'created', 'make', 'flight booking', 'image generator', 'quickchat', 'chat app', 'homelyhub', 'ems'])) {
+    if (contains(['project', 'work', 'portfolio', 'built', 'created', 'make', 'portfolio builder', 'tarun construction', 'interview coach', 'pdf chat', 'job portal', 'ems'])) {
         return {
             text: "Sukumar has built some awesome projects! 🚀 Here are the highlights:\n\n" +
-                  "1. **Flight Booking System:** Airline seat selection & checkout view.\n" +
-                  "2. **AI Image Generator:** Neural API text-to-graphics generator.\n" +
-                  "3. **QuickChat OpenAI:** Fast AI chatbot client with chat history.\n" +
-                  "4. **Chat App Socket.io:** Real-time group chat platform via WebSockets.\n" +
-                  "5. **HomelyHub Web:** Real-estate property filter and search catalog.\n" +
+                  "1. **AI Portfolio Builder:** Drag-and-drop portfolio creator with Gemini writing assistant.\n" +
+                  "2. **Tarun Construction:** Premium construction portal featuring interactive 3D landscapes (Three.js & GSAP).\n" +
+                  "3. **AI Interview Coach:** Mock interviews, coding rounds, and voice feedback via Gemini API.\n" +
+                  "4. **PDF AI Chat:** Upload documents and have semantic, context-aware conversations (RAG).\n" +
+                  "5. **Full-Stack Job Portal:** Job tracker, resume submissions, and recruiter dashboards.\n" +
                   "6. **EMS-2026:** Employee directory dashboard tracking work records.\n\n" +
                   "Should we go inspect his Work section? 📁",
             actions: [{ text: "Scroll to Work", type: "scroll", target: "#portfolio" }]
