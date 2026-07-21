@@ -552,6 +552,9 @@
             }
 
             .card-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                 margin-bottom: 2px;
             }
 
@@ -600,7 +603,24 @@
             }
 
             .project-links {
-                display: none;
+                display: flex !important;
+                gap: 8px;
+                align-items: center;
+            }
+
+            .project-links a {
+                color: #1A365D !important;
+                text-decoration: none !important;
+                font-size: 0.68rem;
+                font-weight: 600;
+                display: inline-flex;
+                align-items: center;
+                gap: 3px;
+            }
+
+            .project-links a i {
+                font-size: 0.65rem;
+                color: #2B6CB0;
             }
 
             .skills-container {
