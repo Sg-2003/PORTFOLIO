@@ -1204,11 +1204,11 @@ function getShibaResponse(query) {
         };
     }
     
-    if (contains(['experience', 'intern', 'work', 'job', 'bluestock', 'emertxe', 'sprint', 'cloud', 'ai'])) {
+    if (contains(['experience', 'intern', 'work', 'job', 'bluestock', 'emertxe', 'sprint', 'cloud', 'infrastructure'])) {
         return {
             text: "Sukumar has solid professional internship experience! 💼\n\n" +
-                  "• **Full Stack Developer Intern** @ Emertxe Pvt. Ltd. (Aug - Dec 2025): Developed modular REST APIs, and structured React + Node.js client-server interfaces.\n" +
-                  "• **Cloud & AI Engineering Intern (In-Office)** @ SPRINT: School of Professional Studies & Information Technology, Hazaribagh Center (Jan - Mar 2025): Deployed cloud infrastructure, containerized services, and integrated AI/ML API endpoints.\n" +
+                  "• **Cloud Engineer Intern (On-site)** @ SPRINT: School of Professional Studies & Information Technology (May 2026 - Present): Gaining practical experience in cloud computing, cloud infrastructure management, resource provisioning, and deployment.\n" +
+                  "• **Full Stack Developer Intern** @ Emertxe Pvt. Ltd. (Aug - Dec 2025): Developed modular REST APIs and structured React + Node.js client-server interfaces.\n" +
                   "• **SDE Intern** @ Bluestock Fintech (Apr - Jun 2025): Built backend API services, resolved bottlenecks, and implemented clean, reusable DSA code logic.\n\n" +
                   "Would you like to read the details in the Experience tab? 📜",
             actions: [
