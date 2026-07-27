@@ -569,14 +569,22 @@
             }
 
             .section {
-                gap: 6px;
+                margin-bottom: 14px !important;
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 6px !important;
+            }
+
+            .section:last-child {
+                margin-bottom: 0 !important;
             }
 
             .section-title {
                 font-size: 0.88rem;
                 color: #1A202C;
                 border-bottom: 1px solid #CBD5E0;
-                padding-bottom: 2px;
+                padding-bottom: 3px;
+                margin-bottom: 6px;
                 gap: 5px;
             }
 
@@ -592,11 +600,17 @@
             }
 
             .card-list {
-                gap: 8px;
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 9px !important;
             }
 
             .card {
-                /* standard flow */
+                margin-bottom: 8px !important;
+            }
+
+            .card:last-child {
+                margin-bottom: 0 !important;
             }
 
             .card-header {
