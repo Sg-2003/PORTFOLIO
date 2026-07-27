@@ -427,6 +427,11 @@
                 margin: 8mm 10mm;
             }
 
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
             :root {
                 --text-color: #2D3748;
                 --text-muted: #4A5568;
@@ -444,6 +449,7 @@
                 min-height: auto !important;
                 font-size: 11px;
                 line-height: 1.25;
+                overflow: visible !important;
             }
 
             .resume-container {
@@ -455,8 +461,18 @@
                 padding: 0 !important;
                 box-shadow: none !important;
                 backdrop-filter: none !important;
+                overflow: visible !important;
                 page-break-inside: avoid;
                 break-inside: avoid;
+            }
+
+            a {
+                color: #0055aa !important;
+                text-decoration: underline !important;
+                cursor: pointer !important;
+                pointer-events: auto !important;
+                position: relative !important;
+                z-index: 10 !important;
             }
 
             .resume-container::before,
@@ -727,19 +743,19 @@
             </div>
             <div class="contact-item">
                 <i class="fa-solid fa-globe"></i>
-                <a href="https://sg-portfolio-nu.vercel.app" target="_blank">sg-portfolio-nu.vercel.app</a>
+                <a href="https://sg-portfolio-nu.vercel.app" target="_blank" rel="noopener noreferrer">sg-portfolio-nu.vercel.app</a>
             </div>
             <div class="contact-item">
                 <i class="fa-brands fa-linkedin"></i>
-                <a href="https://www.linkedin.com/in/sukumar-gope-9b20a81b4/" target="_blank">linkedin.com/in/sukumar-gope</a>
+                <a href="https://www.linkedin.com/in/sukumar-gope-9b20a81b4/" target="_blank" rel="noopener noreferrer">linkedin.com/in/sukumar-gope</a>
             </div>
             <div class="contact-item">
                 <i class="fa-brands fa-github"></i>
-                <a href="https://github.com/Sg-2003" target="_blank">github.com/Sg-2003</a>
+                <a href="https://github.com/Sg-2003" target="_blank" rel="noopener noreferrer">github.com/Sg-2003</a>
             </div>
             <div class="contact-item">
                 <i class="fa-solid fa-code"></i>
-                <a href="https://leetcode.com/u/SUKUMAR_GOPE/" target="_blank">leetcode/SUKUMAR_GOPE</a>
+                <a href="https://leetcode.com/u/SUKUMAR_GOPE/" target="_blank" rel="noopener noreferrer">leetcode/SUKUMAR_GOPE</a>
             </div>
         </div>
 
@@ -825,8 +841,8 @@
                                     <span class="card-role-title">AI Portfolio Builder</span>
                                 </div>
                                 <div class="project-links">
-                                    <a href="https://github.com/Sg-2003/portfolio-builder" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
-                                    <a href="https://portfolio-builder-ten-chi.vercel.app" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                                    <a href="https://github.com/Sg-2003/portfolio-builder" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>
+                                    <a href="https://portfolio-builder-ten-chi.vercel.app" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
                                 </div>
                             </div>
                             <ul class="card-bullets">
@@ -850,8 +866,8 @@
                                     <span class="card-role-title">Tarun Construction Portal</span>
                                 </div>
                                 <div class="project-links">
-                                    <a href="https://github.com/Sg-2003/Tarun_Construction" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
-                                    <a href="https://tarun-construction.vercel.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                                    <a href="https://github.com/Sg-2003/Tarun_Construction" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>
+                                    <a href="https://tarun-construction.vercel.app/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
                                 </div>
                             </div>
                             <ul class="card-bullets">
@@ -875,8 +891,8 @@
                                     <span class="card-role-title">AI Interview Coach</span>
                                 </div>
                                 <div class="project-links">
-                                    <a href="https://github.com/Sg-2003/ai-interview-coach" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
-                                    <a href="https://ai-interview-coach-rho-liard.vercel.app" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                                    <a href="https://github.com/Sg-2003/ai-interview-coach" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>
+                                    <a href="https://ai-interview-coach-rho-liard.vercel.app" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
                                 </div>
                             </div>
                             <ul class="card-bullets">
@@ -989,15 +1005,15 @@
                     <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.8rem; color: var(--text-muted);">
                         <div style="display: flex; align-items: center; gap: 6px;">
                             <i class="fa-solid fa-code" style="color: var(--accent-cyan); width: 14px;"></i>
-                            <a href="https://leetcode.com/u/SUKUMAR_GOPE/" target="_blank" class="coding-profile-link">LeetCode Profile</a>
+                            <a href="https://leetcode.com/u/SUKUMAR_GOPE/" target="_blank" rel="noopener noreferrer" class="coding-profile-link">LeetCode Profile</a>
                         </div>
                         <div style="display: flex; align-items: center; gap: 6px;">
                             <i class="fa-solid fa-terminal" style="color: var(--accent-cyan); width: 14px;"></i>
-                            <a href="https://www.geeksforgeeks.org/profile/sukumar_gope" target="_blank" class="coding-profile-link">GeeksforGeeks Profile</a>
+                            <a href="https://www.geeksforgeeks.org/profile/sukumar_gope" target="_blank" rel="noopener noreferrer" class="coding-profile-link">GeeksforGeeks Profile</a>
                         </div>
                         <div style="display: flex; align-items: center; gap: 6px;">
                             <i class="fa-solid fa-cube" style="color: var(--accent-cyan); width: 14px;"></i>
-                            <a href="https://www.hackerrank.com/profile/sgsukumar321" target="_blank" class="coding-profile-link">HackerRank Profile</a>
+                            <a href="https://www.hackerrank.com/profile/sgsukumar321" target="_blank" rel="noopener noreferrer" class="coding-profile-link">HackerRank Profile</a>
                         </div>
                     </div>
                 </section>
