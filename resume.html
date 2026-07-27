@@ -521,13 +521,16 @@
             }
 
             .contact-grid {
+                display: block !important;
                 border-bottom: 1px solid #E2E8F0;
                 padding-bottom: 6px;
                 margin-bottom: 10px;
-                gap: 4px 12px;
             }
 
             .contact-item {
+                display: inline-block !important;
+                margin-right: 14px;
+                margin-bottom: 4px;
                 color: var(--text-color);
                 font-size: 0.72rem;
             }
@@ -536,6 +539,7 @@
                 color: #0055aa !important;
                 text-decoration: underline !important;
                 font-weight: 500;
+                display: inline !important;
             }
 
             .contact-item i {
@@ -544,17 +548,24 @@
             }
 
             .columns {
-                gap: 15px;
-            }
-
-            .column-side {
-                border-left: 1px solid #E2E8F0;
-                padding-left: 15px;
-                gap: 10px;
+                display: table !important;
+                width: 100% !important;
+                table-layout: fixed !important;
             }
 
             .column-main {
-                gap: 10px;
+                display: table-cell !important;
+                width: 68% !important;
+                vertical-align: top !important;
+                padding-right: 15px !important;
+            }
+
+            .column-side {
+                display: table-cell !important;
+                width: 32% !important;
+                vertical-align: top !important;
+                border-left: 1px solid #E2E8F0 !important;
+                padding-left: 15px !important;
             }
 
             .section {
@@ -589,9 +600,9 @@
             }
 
             .card-header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: center !important;
                 margin-bottom: 2px;
             }
 
@@ -640,7 +651,7 @@
             }
 
             .project-links {
-                display: flex !important;
+                display: inline-flex !important;
                 gap: 8px !important;
                 align-items: center !important;
             }
@@ -664,6 +675,7 @@
             }
 
             .coding-profile-link {
+                display: inline !important;
                 color: #0055aa !important;
                 text-decoration: underline !important;
             }
