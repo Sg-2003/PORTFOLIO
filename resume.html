@@ -430,6 +430,7 @@
             * {
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
+                box-sizing: border-box !important;
             }
 
             :root {
@@ -449,7 +450,6 @@
                 min-height: auto !important;
                 font-size: 11px;
                 line-height: 1.25;
-                overflow: visible !important;
             }
 
             .resume-container {
@@ -462,22 +462,17 @@
                 box-shadow: none !important;
                 backdrop-filter: none !important;
                 overflow: visible !important;
-                page-break-inside: avoid;
-                break-inside: avoid;
-            }
-
-            a {
-                color: #0055aa !important;
-                text-decoration: underline !important;
-                cursor: pointer !important;
-                pointer-events: auto !important;
-                position: relative !important;
-                z-index: 10 !important;
             }
 
             .resume-container::before,
             .actions-panel {
                 display: none !important;
+            }
+
+            a, a * {
+                color: #0055aa !important;
+                text-decoration: underline !important;
+                cursor: pointer !important;
             }
 
             .header {
@@ -528,7 +523,6 @@
                 color: #0055aa !important;
                 text-decoration: underline !important;
                 font-weight: 500;
-                pointer-events: auto !important;
             }
 
             .contact-item i {
@@ -552,8 +546,6 @@
 
             .section {
                 gap: 6px;
-                page-break-inside: avoid;
-                break-inside: avoid;
             }
 
             .section-title {
@@ -580,8 +572,7 @@
             }
 
             .card {
-                page-break-inside: avoid;
-                break-inside: avoid;
+                /* standard flow */
             }
 
             .card-header {
@@ -649,13 +640,11 @@
                 display: inline-flex;
                 align-items: center;
                 gap: 3px;
-                pointer-events: auto !important;
             }
 
             .coding-profile-link {
                 color: #0055aa !important;
                 text-decoration: underline !important;
-                pointer-events: auto !important;
             }
 
             .project-links a i {
