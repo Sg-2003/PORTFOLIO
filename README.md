@@ -20,7 +20,7 @@
 
 ## ✨ Overview
 
-A fully handcrafted, single-page developer portfolio for **Sukumar Gope** — a Final Year B.Tech IT Student and Creative Developer from Jamshedpur. Built with zero front-end frameworks, it features a real-time **3D WebGL scene**, an **interactive AI chat agent**, a **typewriter hero animation**, cyber-themed neon highlights across every section, and buttery-smooth GSAP micro-animations throughout.
+A fully handcrafted, single-page developer portfolio for **Sukumar Gope** — a B.Tech IT Graduate (8.17 CGPA) and Creative Developer from Jamshedpur. Built with zero front-end frameworks, it features a real-time **3D WebGL scene**, an **interactive AI chat agent**, a **typewriter hero animation**, cyber-themed neon highlights across every section, and buttery-smooth GSAP micro-animations throughout.
 
 ---
 
@@ -63,7 +63,7 @@ A consistent color language applied across all sections:
 
 **Highlights by section:**
 - **Home** — B.Tech IT Student, Creative Developer (cyan) · 3D (animated pulse)
-- **About** — passionate Software Web Developer, Final Year B.Tech IT Student (cyan)
+- **About** — passionate Software Web Developer, B.Tech IT Graduate with 8.17 CGPA (cyan)
 - **Experience** — React, Node.js, JavaScript, REST APIs, DSA (cyan) · Company names (magenta)
 - **Education** — Software Engineering, Data Structures, Web Graphics etc. (cyan) · Institutions (magenta)
 - **Services** — modern layouts, semantic code, pixel-perfect, React, NodeJS (magenta)
@@ -174,7 +174,7 @@ npx vercel --prod
 ## 👤 About the Developer
 
 **Sukumar Gope**
-- 🎓 Final Year B.Tech IT — *University College of Engineering & Technology, Hazaribagh*
+- 🎓 B.Tech IT Graduate (8.17 CGPA) — *University College of Engineering & Technology, Hazaribagh*
 - 💼 Ex-Intern @ Emertxe Pvt. Ltd. (Full Stack) & Bluestock Fintech (SDE)
 - 🌐 [GitHub](https://github.com/Sg-2003) · [LinkedIn](https://www.linkedin.com/in/sukumar-gope-9b20a81b4/) · [LeetCode](https://leetcode.com/u/SUKUMAR_GOPE/) · [Portfolio](https://sg-portfolio-nu.vercel.app)
 - 📧 sgsukumar321@gmail.com

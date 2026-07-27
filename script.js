@@ -1220,8 +1220,8 @@ function getShibaResponse(query) {
     if (contains(['education', 'college', 'university', 'b.tech', 'diploma', 'gph', 'ucet', 'matriculation', 'school'])) {
         return {
             text: "Here is Sukumar's academic journey! 🎓\n\n" +
-                  "• **B.Tech IT (Lateral Entry)** @ UCET Hazaribagh (2023 - 2026): Final year student, specialized curriculum in Web Graphics and DSA.\n" +
-                  "• **Diploma in Computer Engineering** @ Government Polytechnic Kharsawan (2020 - 2023): Core computer science foundation.\n" +
+                  "• **B.Tech IT (Lateral Entry)** @ UCET Hazaribagh (2023 - 2026): Graduated with 8.17 CGPA, specialized curriculum in Web Graphics and DSA.\n" +
+                  "• **Diploma in Computer Engineering** @ Government Polytechnic Kharsawan (2020 - 2023): Graduated with 8.07 CGPA, core computer science foundation.\n" +
                   "• **10th Matriculation** @ NSC High School Kalikapur (Completed 2020).\n\n" +
                   "Let's check out the Education section! 📚",
             actions: [

@@ -355,6 +355,16 @@
             color: var(--accent-cyan);
         }
 
+        .coding-profile-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .coding-profile-link:hover {
+            color: var(--accent-cyan);
+        }
+
         /* Sidebar Elements */
         .skills-container {
             display: flex;
@@ -493,9 +503,16 @@
                 gap: 4px 12px;
             }
 
-            .contact-item, .contact-item a {
+            .contact-item {
                 color: var(--text-color);
                 font-size: 0.72rem;
+            }
+
+            .contact-item a {
+                color: #0055aa !important;
+                text-decoration: underline !important;
+                font-weight: 500;
+                pointer-events: auto !important;
             }
 
             .contact-item i {
@@ -609,13 +626,20 @@
             }
 
             .project-links a {
-                color: #1A365D !important;
-                text-decoration: none !important;
+                color: #0055aa !important;
+                text-decoration: underline !important;
                 font-size: 0.68rem;
                 font-weight: 600;
                 display: inline-flex;
                 align-items: center;
                 gap: 3px;
+                pointer-events: auto !important;
+            }
+
+            .coding-profile-link {
+                color: #0055aa !important;
+                text-decoration: underline !important;
+                pointer-events: auto !important;
             }
 
             .project-links a i {
@@ -947,13 +971,13 @@
                             <h3 class="edu-degree">B.Tech in Information Technology</h3>
                             <span class="edu-school">Univ. College of Eng. & Tech (UCET)</span>
                             <span class="edu-detail">Hazaribagh | 2023 - 2026 (Lateral Entry)</span>
-                            <span class="edu-detail" style="font-weight: 500;">Graduation: Sep 2026 (Expected)</span>
+                            <span class="edu-detail" style="font-weight: 600; color: #ffffff;">CGPA: 8.17 / 10 (Graduated)</span>
                         </div>
 
                         <div class="edu-item">
                             <h3 class="edu-degree">Diploma in Computer Engineering</h3>
                             <span class="edu-school">Govt. Polytechnic, Kharsawan</span>
-                            <span class="edu-detail">2020 - 2023 | Distinction Graduate</span>
+                            <span class="edu-detail">2020 - 2023 | CGPA: 8.07 / 10 (Distinction)</span>
                         </div>
 
                     </div>
@@ -965,15 +989,15 @@
                     <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.8rem; color: var(--text-muted);">
                         <div style="display: flex; align-items: center; gap: 6px;">
                             <i class="fa-solid fa-code" style="color: var(--accent-cyan); width: 14px;"></i>
-                            <a href="https://leetcode.com/u/SUKUMAR_GOPE/" target="_blank" style="color: var(--text-muted); text-decoration: none;">LeetCode Profile</a>
+                            <a href="https://leetcode.com/u/SUKUMAR_GOPE/" target="_blank" class="coding-profile-link">LeetCode Profile</a>
                         </div>
                         <div style="display: flex; align-items: center; gap: 6px;">
                             <i class="fa-solid fa-terminal" style="color: var(--accent-cyan); width: 14px;"></i>
-                            <a href="https://www.geeksforgeeks.org/profile/sukumar_gope" target="_blank" style="color: var(--text-muted); text-decoration: none;">GeeksforGeeks Profile</a>
+                            <a href="https://www.geeksforgeeks.org/profile/sukumar_gope" target="_blank" class="coding-profile-link">GeeksforGeeks Profile</a>
                         </div>
                         <div style="display: flex; align-items: center; gap: 6px;">
                             <i class="fa-solid fa-cube" style="color: var(--accent-cyan); width: 14px;"></i>
-                            <a href="https://www.hackerrank.com/profile/sgsukumar321" target="_blank" style="color: var(--text-muted); text-decoration: none;">HackerRank Profile</a>
+                            <a href="https://www.hackerrank.com/profile/sgsukumar321" target="_blank" class="coding-profile-link">HackerRank Profile</a>
                         </div>
                     </div>
                 </section>
